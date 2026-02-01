@@ -39,7 +39,7 @@ li {
 .contact-button:hover {
   background-color: white;
   color: rgb(44, 50, 71);
-  cursor: pointer; 
+  cursor: pointer;
   border: 2px solid rgb(44, 50, 71);
   transition: all 0.3s;
 }
@@ -64,17 +64,37 @@ li {
 }
 
 .view-gallery-button {
-  border: 2px solid #1e1e1e;
+  border: 2px solid rgb(30, 30, 30);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
 
 .view-gallery-button:hover {
-  background-color: #1e1e1e;
+  background-color: rgb(30, 30, 30);
   color: white;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+.img-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.images {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+	border-radius: 0.5rem; 
+	scrollbar-width: none; 
+}
+
+.images img {
+	flex: 1 0 100%;
+	object-fit: cover;
 }
 
 .card-section {
@@ -92,6 +112,7 @@ li {
 }
 
 .cards {
+  background-color: white;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -176,5 +197,28 @@ li {
 }
 
 .submit-button:hover {
-  background-color: rgb(44, 50, 71);    
+  background-color: rgb(44, 50, 71);
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 80%;
+    margin-top: 2rem;
+  }
+
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
